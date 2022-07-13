@@ -4,8 +4,8 @@
   "description": "Udacity Storefront Backend Project",
   "main": "server.js",
   "scripts": {
-    "start-ts": "nodemon src/server.ts",
-    "start": "node server.js",
+    "start": "nodemon src/server.ts",
+    "start-node": "node server.js",
     "lint": "eslint --fix src/* && echo 'Lint complete.'",
     "prettier": "prettier --config .prettierrc \"src/**/*.(js|ts|json)\" --write",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
