@@ -1,0 +1,3 @@
+<div fxLayout="row" class="product-container">
+    <app-product-item  *ngFor="let product of productList" [product]="product" (added)="addProductToCart($event)" class="product-index"></app-product-item>
+</div>

@@ -1,0 +1,59 @@
+<div class="purchase-container">
+  <form #form="ngForm" fxLayout="column" fxLayoutGap="10px" class="purchase-container" (ngSubmit)="onSubmit()">
+    <label>Full name</label>
+    <input 
+       type="text"
+       name="fullname" 
+       class="text-input" 
+       required 
+       minlength="3" 
+       placeholder="(minimum 3 characters)"
+       [(ngModel)]="fullName"
+       #name="ngModel">
+       <div *ngIf="name.invalid && name.dirty" class="warning-input">
+        <div *ngIf="name.errors?.['required']">
+          Full name is required.
+        </div>
+        <div *ngIf="name.errors?.['minlength']">
+          Your full name must contain at least 3 characters.
+        </div>
+      </div>
+    <label>Address</label>
+    <input name="address"
+           placeholder="(minimum 6 characters)" 
+           required
+           minlength="6"
+           class="text-input"
+           [(ngModel)]="address"
+           #addr="ngModel">
+    <div *ngIf="addr.invalid && addr.dirty" class="warning-input">
+      <div *ngIf="addr.errors?.['required']">
+        Address is required.
+      </div>
+      <div *ngIf="addr.errors?.['minlength']">
+        Address must contain at least 6 characters.
+      </div>
+    </div>
+    <label>Credit card number</label>
+    <input name="creditCard"
+           placeholder="(minimum 16 numbers)"
+           required
+           minlength="16"
+           pattern="[0-9]{16,}"
+           class="text-input"
+           [(ngModel)]="creditCard"
+           #cart="ngModel">
+    <div *ngIf="cart.invalid && cart.dirty" class="warning-input">
+      <div *ngIf="cart.errors?.['required']">
+        Credit card is required.
+      </div>
+      <div *ngIf="cart.errors?.['pattern']">
+        Credit card must contain at least 16 number.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid" >Submit</button>
+  </form>
+</div>
+
+
+

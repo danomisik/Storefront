@@ -1,0 +1,35 @@
+<div class="cart-container" *ngIf="cart.products.length > 0">
+<div class="cart-panel">
+<ul>
+    <li fxLayout="column" *ngFor="let cartProduct of cart.products">
+        <div fxLayout="row">
+            <img src="{{cartProduct.product.url}}">
+            <div class="cart-item-details">
+                <p>{{cartProduct.product.name}}</p>
+                <p>${{cartProduct.product.price}}</p>
+                <label>Quantity:</label>
+                <mat-form-field appearance="fill" class="number-input">
+                    <mat-select [(ngModel)]="cartProduct.quantity" (ngModelChange)="updatePrice()">
+                      <mat-option value="1">1</mat-option>
+                      <mat-option value="2">2</mat-option>
+                      <mat-option value="3">3</mat-option>
+                      <mat-option value="4">4</mat-option>
+                      <mat-option value="5">5</mat-option>
+                      <mat-option value="6">6</mat-option>
+                      <mat-option value="7">7</mat-option>
+                      <mat-option value="8">8</mat-option>
+                      <mat-option value="9">9</mat-option>
+                      <mat-option value="10">10</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                <button type="submit" (click)="onRemove(cartProduct.product.id)" class="btn btn-secondary btn-sm">Remove</button>
+            </div>
+        </div>
+    </li>
+    <h2>Totals: ${{ cart.price }}</h2>
+</ul>
+</div>
+</div>
+<h2 class="empty-cart-message" *ngIf="cart.products.length == 0">
+    Your cart is empty.
+</h2>

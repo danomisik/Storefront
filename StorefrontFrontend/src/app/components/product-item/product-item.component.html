@@ -1,0 +1,23 @@
+<div class="product-container">
+    <h1>{{product.name}}</h1>
+    <a routerLink="/products/{{ product.id }}">
+        <img src="{{product.url}}" class="product-image">
+    </a>
+    <p>${{product.price}}</p>
+    <mat-form-field appearance="fill" class="select-input">
+        <mat-select [(value)]="quantity">
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+          <mat-option value="6">6</mat-option>
+          <mat-option value="7">7</mat-option>
+          <mat-option value="8">8</mat-option>
+          <mat-option value="9">9</mat-option>
+          <mat-option value="10">10</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <p><button (click)="added.emit({product: product, quantity: quantity})" class="btn btn-primary" style="width: 108px;">Add to Cart</button></p>
+</div>
+
