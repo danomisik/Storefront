@@ -34,13 +34,13 @@ const errorHandler: ErrorRequestHandler = (
 };
 
 //CORS enabled
-const corsOptions = {
-  origin: CORS_ORIGIN,
-  optionSuccessStatus: 200
-};
+// const corsOptions = {
+//   origin: CORS_ORIGIN,
+//   optionSuccessStatus: 200
+// };
 
 app.use(errorHandler);
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 products_routes(app);
 users_routes(app);
