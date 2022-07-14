@@ -9,3 +9,5 @@ cp -rf .elasticbeanstalk www/.elasticbeanstalk
 #copy javascript config files
 cp .npmrc www/.npmrc
 cp package.json www/package.json
+cd www 
+zip -r Archive.zip .
