@@ -5,12 +5,15 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon src/server.ts",
-    "start-js": "node build/server.js",
+    "start-local": "node build/server.js",
     "lint": "eslint --fix src/* && echo 'Lint complete.'",
     "prettier": "prettier --config .prettierrc \"src/**/*.(js|ts|json)\" --write",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
     "test": "db-migrate --env test reset && set ENV=test&& npm run build && db-migrate --env test up && jasmine && db-migrate --env test reset",
-    "build": "npx tsc"
+    "clean": "rm -rf www/ || true",
+    "deploy": "cd www && ls -la && echo 'Deployed'",
+    "build": "chmod +x bin/build-for-eb.sh && bin/build-for-eb.sh",
+    "build-local": "npx tsc"
   },
   "author": "Daniel Misik",
   "license": "ISC",
