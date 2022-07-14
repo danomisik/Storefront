@@ -6,6 +6,9 @@ node_modules
 # misc
 .DS_Store
 
+# tmp package.json file
+package-lock.json
+
 ###### reactnd-contacts-complete
 # testing
 coverage
