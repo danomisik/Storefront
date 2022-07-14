@@ -2,7 +2,7 @@
   "name": "storefront_backend",
   "version": "1.0.0",
   "description": "Udacity Storefront Backend Project",
-  "main": "server.js",
+  "main": "build/server.js",
   "scripts": {
     "start": "nodemon src/server.ts",
     "start-local": "node build/server.js",
@@ -10,10 +10,9 @@
     "prettier": "prettier --config .prettierrc \"src/**/*.(js|ts|json)\" --write",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
     "test": "db-migrate --env test reset && set ENV=test&& npm run build && db-migrate --env test up && jasmine && db-migrate --env test reset",
-    "clean": "rm -rf www/ || true",
-    "deploy": "cd www && ls -la && echo 'Deployed'",
-    "build": "chmod +x bin/build-for-eb.sh && bin/build-for-eb.sh",
-    "build-local": "npx tsc"
+    "deploy": "db-migrate up && eb deploy",
+    "clean": "rm -rf build || true",
+    "build": "npx tsc"
   },
   "author": "Daniel Misik",
   "license": "ISC",
@@ -25,7 +24,6 @@
     "@altostra/type-validations": "^2.6.3",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
-    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/jasmine": "^4.0.3",
     "@types/jsonwebtoken": "^8.5.8",
@@ -35,6 +33,7 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
+    "@types/dotenv": "^8.2.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
