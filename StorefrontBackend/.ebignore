@@ -1,0 +1,8 @@
+migrations
+bin
+.env
+CODEOWNERS
+README.md
+REQUIREMENTS.md
+node_modules
+build
