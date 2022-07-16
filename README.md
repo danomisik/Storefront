@@ -20,7 +20,7 @@ Link to deployed Frontend: <http://udacity-491528036206.s3-website-us-east-1.ama
 
 Link to deployed Backend: <http://udacity-491528036206.s3-website-us-east-1.amazonaws.com/>
 
-Check also [Application dependencies](docs/Application_dependencies.md#application-dependencies) section.
+Check also [Application dependencies](./docs/Application_dependencies.md#application-dependencies) section.
 
 
 ## Development
@@ -35,7 +35,7 @@ Run `npm run frontend:build` to build the  frontend project. The build artifacts
 
 ### Running unit tests
 
-- Deploy [AWS RDS database](docs/Infrastructure_description.md#aws-rds)
+- Deploy [AWS RDS database](./docs/Infrastructure_description.md#aws-rds)
 
 - Run `npm run backend:test` to execute backend  unit tests via [Jasmine](https://jasmine.github.io/).
 
@@ -45,8 +45,8 @@ Run `npm run frontend:build` to build the  frontend project. The build artifacts
 
 To deploy DEV app do following:
 
-- Deploy and setup [infrastructure](docs/Infrastructure_description.md#infrastructure-description)
-- Configure [circle-ci](docs/Pipeline_description.md#pipeline-description)
+- Deploy and setup [infrastructure](./docs/Infrastructure_description.md#infrastructure-description)
+- Configure [circle-ci](./docs/Pipeline_description.md#pipeline-description)
 - Run `npm run backend:deploy` to deploy backend inside AWS Elastic Beanstalk.
 - Run `npm run frontend:deploy` to deploy frontend inside S3 bucket
 
@@ -55,8 +55,8 @@ To deploy DEV app do following:
 
 To setup CI/CI do following:
 
-- Deploy and setup [infrastructure](docs/Infrastructure_description.md#infrastructure-description)
-- Configure [circle-ci](docs/Pipeline_description.md#pipeline-description)
+- Deploy and setup [infrastructure](./docs/Infrastructure_description.md#infrastructure-description)
+- Configure [circle-ci](./docs/Pipeline_description.md#pipeline-description)
 - Any new code pushed inside repo will be processed by Circle CI
 
 
