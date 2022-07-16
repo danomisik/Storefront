@@ -14,7 +14,7 @@ This project is example of Store that contains following components:
 
 Web App looks following in browser:
 
-![Web App opened in browser](/docs/images/frontend-browser.PNG)
+![Web App opened in browser](./docs/images/frontend-browser.PNG)
 
 Link to deployed Frontend: <http://udacity-491528036206.s3-website-us-east-1.amazonaws.com/>
 
