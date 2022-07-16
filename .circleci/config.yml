@@ -8,10 +8,6 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-      filters:
-        branches:
-          only:
-            - master
       - node/install
       - checkout
       - aws-cli/setup
@@ -46,3 +42,12 @@ jobs:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
+
+workflows:
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
