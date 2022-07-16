@@ -10,7 +10,7 @@
     "prettier": "prettier --config .prettierrc \"src/**/*.(js|ts|json)\" --write",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
     "test": "db-migrate --env test reset && set ENV=test&& npm run build && db-migrate --env test up && jasmine && db-migrate --env test reset",
-    "deploy": "db-migrate up && eb list && eb deploy StorefrontBackend-dev",
+    "deploy": "db-migrate up && eb deploy",
     "clean": "rm -rf build || true",
     "build": "npx tsc"
   },

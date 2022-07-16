@@ -29,7 +29,4 @@ yarn-error.log*
 ###### reactnd-contacts-server
 www
 app.zip
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+
