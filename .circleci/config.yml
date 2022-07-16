@@ -15,11 +15,12 @@ jobs:
       - run:
           name: Back-End Install
           command: |
-            npm run backend:install
-      - run:
-          name: Back-End Test
-          command: |
-            npm run backend:test
+            npm run backend:
+      # TODO: add tests before deployment
+      # - run:
+      #     name: Back-End Test
+      #     command: |
+      #       npm run backend:test
       - run:
           name: Back-End Deploy
           command: |
@@ -28,10 +29,11 @@ jobs:
           name: Front-End Install
           command: |
             npm run frontend:install
-      - run:
-          name: Front-End Test
-          command: |
-            npm run frontend:test
+      # TODO: add tests before deployment
+      # - run:
+      #     name: Front-End Test
+      #     command: |
+      #       npm run frontend:test
       - run:
           name: Front-End Build
           command: |
