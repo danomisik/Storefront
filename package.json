@@ -2,7 +2,7 @@
     "scripts": {
         "backend:install": "cd StorefrontBackend && npm install",
         "backend:deploy": "cd StorefrontBackend && npm run deploy",
-        "frontend:install": "cd StorefrontFrontend && npm install",
+        "frontend:install": "cd StorefrontFrontend && npm install --force",
         "frontend:build": "cd StorefrontFrontend && npm run build",
         "frontend:deploy": "cd StorefrontFrontend && npm run deploy"
     }
