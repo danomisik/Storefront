@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Back-End Install
           command: |
-            npm run backend:
+            npm run backend:install
       # TODO: add tests before deployment
       # - run:
       #     name: Back-End Test
