@@ -8,7 +8,7 @@ jobs:
     filters:
       branches:
         only:
-          - develop
+          - master
     docker:
       - image: "cimg/base:stable"
     steps:
