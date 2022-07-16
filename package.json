@@ -1,8 +1,9 @@
 {
     "scripts": {
-        "frontend:install": "cd reactnd-contacts-complete && npm install",
-        "backend:install": "cd reactnd-contacts-server && npm install",
-        "frontend:build": "cd reactnd-contacts-complete && npm run build",
-        "backend:build": "cd reactnd-contacts-server && npm run build"
+        "backend:install": "cd StorefrontBackend && npm install",
+        "backend:deploy": "cd StorefrontBackend && npm run deploy",
+        "frontend:install": "cd StorefrontFrontend && npm install",
+        "frontend:build": "cd StorefrontFrontend && npm run build",
+        "frontend:deploy": "cd StorefrontFrontend && npm run deploy"
     }
 }

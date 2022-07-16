@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "deploy": "chmod +x ./bin/deploy.sh && ./bin/deploy.sh",
     "test": "ng test"
   },
   "private": true,

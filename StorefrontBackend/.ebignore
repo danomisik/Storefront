@@ -7,3 +7,10 @@ REQUIREMENTS.md
 node_modules
 build
 LICENSE.txt
+spec
+package-lock.json
+.prettierignore
+.prettierrc
+.eslintrc
+.eslintignore
+database.json
