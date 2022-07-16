@@ -20,7 +20,7 @@ AWS RDS - Postgres - database contain data tables and data needed by Storefront 
 Do following steps:
 
 - Create Postgres Database through AWS RDS service:
-  ![AWS RDS sttings](./images/rds-setting.png)
+  ![AWS RDS sttings](./images/rds-setting.PNG)
 - Allow 0.0.0.0/0 for default security group
 - Login inside Postgres deployment through psql and create 2 database for dev and test
 ```
@@ -42,9 +42,9 @@ AWS S3 bucket is used for Storefront Frontent presentation and is configured in 
 Do following steps:
 
 - Create new S3 bucket:
- ![AWS S3 settings](./images/s3-setting.png)
+ ![AWS S3 settings](./images/s3-setting.PNG)
 - Enable CORS configuration:
-![AWS S3 cors](./images/s3-cors.png)
+![AWS S3 cors](./images/s3-cors.PNG)
 - Add IAM Policy for S3 bucket:
 ```
 {

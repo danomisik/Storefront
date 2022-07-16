@@ -32,4 +32,4 @@ Do following:
 
 2. Pipeline can by used for CI/CD. Successful build in Circle CI will looks like following:
 
-![Flowchart describing pipeline](./images/pipeline-last-build.png)
+![Flowchart describing pipeline](./images/pipeline-last-build.PNG)

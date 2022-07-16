@@ -35,7 +35,7 @@ Run `npm run frontend:build` to build the  frontend project. The build artifacts
 
 ### Running unit tests
 
-- Deploy [AWS RDS database](./docs/Infrastructure_description.md#aws-rds)
+- Deploy [AWS RDS database](./docs/Infrastructure_description.md#AWS-RDS)
 
 - Run `npm run backend:test` to execute backend  unit tests via [Jasmine](https://jasmine.github.io/).
 
