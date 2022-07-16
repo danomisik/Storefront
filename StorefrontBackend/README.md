@@ -6,7 +6,7 @@ This project contain example backend for store with users, orders and products t
 
 To get started, clone this repo and run `npm install` in your terminal at the project root.
 
-## Deploy Postgres databases
+## Deploy Postgres databases through Docker
 
 1. Install Docker
 
@@ -78,7 +78,7 @@ psql -h 127.0.0.1 -p 5433 -U daniel postgres
 
 ## How to start tests
 
-1. [Deploy TEST database](#deploy-postgres-databases)
+1. [Deploy TEST database](#deploy-postgres-databases-through-docker)
 2. Run following commands in terminal in root directory of project:
 
 ```
@@ -96,7 +96,7 @@ npm run prettier
 
 ## How to deploy DEV application
 
-1. [Deploy DEV database](#deploy-postgres-databases)
+1. [Deploy DEV database](#deploy-postgres-databases-through-docker)
 
 2. Migrate database tables for DEV by following command in terminal in root directory of project:
 
@@ -110,7 +110,7 @@ db-migrate up
 npm run watch
 ```
 
-4. App is running on localhost and port `3000`.
+4. App is running on localhost and port `8080`.
 
 5. Use Postman/curl/frontend to call storefront backend:
 
